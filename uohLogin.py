@@ -5,11 +5,11 @@ from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
 
 #------ Edit the following ------#
-myRollno = "17mcmi02"
-myPass = "cnf2017"
+myRollno = "YOUR USERNAME HERE"
+myPass = "YOUR PASSWORD HERE"
 #-------------------------------#
 
-browser = webdriver.Chrome()
+browser = webdriver.Firefox()
 browser.get("https://192.168.56.2:8090/httpclient.html")
 time.sleep(2)
 username = browser.find_element_by_id("username")

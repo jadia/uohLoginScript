@@ -32,7 +32,7 @@ else
 fi
 echo ""
 echo -e "\e[41m Installing selenium. \e[0m"
-pip3 install selenium
+sudo pip3 install selenium
 echo ""
 echo -e "\e[96mAttempting to download chrome driver.\n\e[0m"
 chromePath="/usr/bin/chromedriver"
