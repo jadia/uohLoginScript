@@ -1,4 +1,7 @@
 #!/bin/bash
+:'
+Script uses firefox.
+'
 #check if script is run as root
 if [[ $EUID -ne 0 ]]; then
    echo -e "\e[96mThis script must be run as root\e[0m" 
@@ -24,7 +27,6 @@ which python3 > /dev/null
 if [[ "$?" == 0 ]]; then
     echo -e "\e[42mPython3 already installed. Moving on...\e[0m"
 elif [[ "$?" == 1 ]]; then
-#		checkInternet()
     sudo apt-get install -y python3
     echo -e "\e[42mPython3 installation done\e[0m"
 else
@@ -34,8 +36,8 @@ echo ""
 echo -e "\e[41m Installing selenium. \e[0m"
 sudo pip3 install selenium
 echo ""
-echo -e "\e[96mAttempting to download chrome driver.\n\e[0m"
-chromePath="/usr/bin/chromedriver"
+echo -e "\e[96mAttempting to download mozilla driver.\n\e[0m"
+firefoxPath="/usr/bin/geckodriver"
 usrbin="/usr/bin/"
 if [[ -f "$chromePath" ]]; then
     echo -e "\e[42mFirefox driver already present. Moving on...\e[0m"
